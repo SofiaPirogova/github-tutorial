@@ -2,3 +2,10 @@ body {
   background-color: #fff;
   color: #2a2a2a;
 }
+.joke {
+  color: pink;
+}
+p {
+  background-image: url("../images/10.jpg");
+  color: white;
+}
