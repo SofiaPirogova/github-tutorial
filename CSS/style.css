@@ -11,3 +11,73 @@ p {
   color: white;
 }
 */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* section banner */
+.tagline {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: grey;
+  width: 696px;
+  margin: 0 auto;
+}
+.banner-center {
+  text-align: center;
+}
+.banner {
+  padding: 200px 0px;
+  background-color: darkblue;
+}
+
+.order {
+  color: white;
+  background-color: rgb(151, 15, 38);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-top: 30px;
+}
+.item-p {
+  background-color: #2a2a2a;
+}
+.site-nav .item-p + .item-p {
+  background-color: yellow;
+}
+
+/* попытка сделать марджины с шириной элемента в процентах от контейнера*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  background-color: #95ec62;
+}
+.flex-element {
+  width: calc((100% - 3 * 30px) / 4);
+  /* width: calc((100% - 90px) / 4); */
+  /* width: calc((ширина контейнера в процентах - количество марджинов по факту(это общее количество элементов в строке -1
+   умноженное на значение маржина в пикеселях) / на количество элементов в строке); */
+  margin-right: 30px;
+  background-color: #f7f454;
+}
+
+.flex-element:nth-child(4n) {
+  margin-right: 0;
+}
+/* попытка удалась, когда поставила пробелы вокруг минуса в формуле */
