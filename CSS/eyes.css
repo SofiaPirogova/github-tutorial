@@ -1,0 +1,132 @@
+.product {
+  position: relative;
+
+  width: 370px;
+
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
+}
+.img-apples {
+  width: 100%;
+}
+.parent {
+  color: var(--random-color);
+}
+.item {
+  color: red;
+}
+.item:hover {
+  color: blue;
+}
+.icon {
+  --color1: currentColor;
+  /* background-color: yellow; */
+  /* или тут можно писать значение 
+  , чтобы наследовал цвет родителя 
+  или конкретный цвет, 
+  --color1:red;
+  т.е. если цветов много, будет 
+  --color1: red;
+  --color2:blue;
+  итд
+  */
+}
+
+/* .product-actions1 {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  outline: 3px solid orange;
+} */
+
+.product-meta {
+  padding: 15px;
+}
+
+.product-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-actions {
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  /* bottom: -30%;
+  можно задавать в процентах и отрицательные значения
+  при этом позиционируется не по центру. а левый верхний угол свг
+  находится по центру от середины родителя, по этому при 50% 
+  визуально не будет стоять это всё на серединке */
+
+  outline: 3px solid orange;
+  display: flex;
+
+  opacity: 0.2;
+  transition: 500ms opacity linear;
+}
+.product-actions:hover {
+  opacity: 1;
+}
+.product-actions .icon,
+.product-actions1 .icon,
+.item .icon {
+  width: 32px;
+  height: 32px;
+  /* background-color: blueviolet; */
+}
+.img-icon {
+  background-color: blue;
+}
+.divon {
+  display: flex;
+}
+
+/* 2 пример */
+.apples-img {
+  position: relative;
+}
+.apples-img::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(131, 68, 131, 0.5);
+  opacity: 0;
+}
+.apples-img:hover::before {
+  opacity: 1;
+}
+.product1 {
+  width: 370px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.product-actions2 {
+  position: absolute;
+  /* позиционирование по центру картинки */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* bottom: -30%;
+  можно задавать в процентах и отрицательные значения
+  при этом позиционируется не по центру. а левый верхний угол свг
+  находится по центру от середины родителя, по этому при 50% 
+  визуально не будет стоять это всё на серединке */
+
+  outline: 3px solid orange;
+  display: flex;
+}
+/* либо ставим по центру через общий предок,
+этоиспользуется только когда один позиционируемый элемент */
+/* .apples-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* 2 пример окончен */
