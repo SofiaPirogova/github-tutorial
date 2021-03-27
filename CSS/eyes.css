@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .product {
   position: relative;
 
@@ -130,3 +134,52 @@
   align-items: center;
 } */
 /* 2 пример окончен */
+.fixed {
+  position: fixed;
+}
+/* выпадающее меню */
+.menu-clothes {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu-clothes .item {
+  position: relative;
+
+  margin-right: 15px;
+  outline: 2px solid teal;
+}
+.menu-link {
+  display: block;
+  padding: 20px 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: aliceblue;
+  font-size: 20px;
+  text-decoration: none;
+}
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  background-color: pink;
+  display: none;
+}
+.item:hover .submenu {
+  display: block;
+}
+.item:hover .menu-link {
+  background-color: brown;
+}
+.submenu-link {
+  text-decoration: none;
+}
+/* формы */
+.textarea {
+  resize: none;
+}

@@ -23,6 +23,7 @@
         </ul>
       </nav>
     </header>
+
     <!-- позиционирование и прозрачность -->
     <section class="one">
       <a href="./index.html">Назад на главную</a>
@@ -107,8 +108,9 @@
         </div>
       </article>
     </section>
+    <br />
     <!-- позиционирование относительно body -->
-    <div class="product-actions">
+    <div class="product-actions fixed">
       <button aria-label="В избранное" class="item">
         <svg class="icon">
           <use href="./images/eyes/sprite-icons.svg#icon-facebook"></use>
@@ -125,5 +127,99 @@
         </svg>
       </button>
     </div>
+    <!-- выпадающее меню -->
+    <ul class="menu-clothes">
+      <li class="item">
+        <a href="#" class="menu-link">Shoes</a>
+        <ul class="submenu">
+          <li class="submenu-item">
+            <a href="" class="submenu-link">Brown</a>
+          </li>
+          <li class="submenu-item"><a href="" class="submenu-link">dark</a></li>
+          <li class="submenu-item">
+            <a href="" class="submenu-link">white</a>
+          </li>
+          <li class="submenu-item">
+            <a href="" class="submenu-link">yellow</a>
+          </li>
+        </ul>
+      </li>
+      <li class="item">
+        <a href="#" class="menu-link">Dresses</a>
+        <ul class="submenu">
+          <a href="" class="submenu-link">long</a>
+          <a href="" class="submenu-link">short</a>
+        </ul>
+      </li>
+      <li class="item">
+        <a href="#" class="menu-link">Underwear</a>
+        <ul class="submenu">
+          <li class="submenu-item">
+            <a href="" class="submenu-link">Bra</a>
+          </li>
+          <li class="submenu-item">
+            <a href="" class="submenu-link">slippers</a>
+          </li>
+          <li class="submenu-item">
+            <a href="" class="submenu-link">underpants</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quae, nam
+      doloribus temporibus eos architecto quis qui odio corporis eaque
+      reprehenderit, dicta consequatur molestiae saepe cupiditate tempora
+      aperiam illo quaerat modi autem tenetur. Fugiat dicta dolorem suscipit,
+      repellat quia perferendis blanditiis ipsum a! Aut nesciunt, eligendi
+      incidunt consectetur aliquid quaerat. Vel dolorum numquam voluptatibus
+      vero labore. Blanditiis consequuntur quam veritatis enim recusandae
+      possimus alias adipisci nulla tempore.
+    </p>
+    <br />
+    <!-- учимся делать формы для заполнения -->
+    <form class="js-speaker-form">
+      <label for="name">Имя</label>
+      <input type="text" name="user-name" id="name" />
+      <br />
+      <!-- другая запись так, чтобы при нажатии работало, но подходит только для простых форм -->
+      <!-- <label>
+        Имя
+        <input type="text" name="last-name" />
+      </label> -->
+      <label for="tel">Телефон</label>
+      <input type="tel" name="tel" id="tel" />
+      <br />
+      <label for="mail">Почта</label>
+      <input type="email" name="mail" id="mail" />
+      <br />
+      <!-- у группы имя одинаковое, важно для бэкенда у  type="radio" тоже.
+         value добавляется, когда нужно дать имя конерктному из группы-->
+      <input type="checkbox" name="file" value="html" id="html" />
+      <label for="html">Html</label>
+      <input type="checkbox" name="file" value="css" id="css" />
+      <label for="css">Css</label>
+      <input type="checkbox" name="file" value="js" id="js" />
+      <label for="js">Js</label>
+      <br />
+      <label for="pdf">Загрузите копию доклада в pdf</label>
+      <input type="file" name="pdf" id="pdf" />
+      <br />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <button type="submit">Подтвердить</button>
+    </form>
+    <!-- <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+          });
+      })();
+    </script> -->
   </body>
 </html>
